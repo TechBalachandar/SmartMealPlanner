@@ -1,0 +1,19 @@
+server:
+  port: 0
+
+jwt:
+  secret: mySuperSecretKeyForJWTSigning
+
+spring:
+  application:
+    name: AUTHENTICATION-SERVICE  # ✅ use : instead of = and match with API Gateway route
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/smartmealplanner
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
